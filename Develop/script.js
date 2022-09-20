@@ -10,7 +10,7 @@ let timeArr = [9, 10, 11, 12, 1, 2, 3, 4, 5];
 for (let i = 0; i < 9; i++) {
     //Append Row to Grid
     let rowEl = $('<div>');
-    rowEl.attr('class', 'row');
+    rowEl.attr('class', 'time-block, row');
     calendarEl.append(rowEl);
 
     //Append Time Column to Row
@@ -26,12 +26,12 @@ for (let i = 0; i < 9; i++) {
 
     //Append Text Column to Row
     let colEl2 = $('<div>');
-    colEl2.attr('class', 'col-10, past');
+    colEl2.attr('class', 'col-10');
     colEl2.text('Test');
     rowEl.append(colEl2);
 
     //Append Button Column to Row
-    let colEl3 = $('<div>');
+    let colEl3 = $('<button>');
     colEl3.attr('class', 'col, saveBtn');
     colEl3.text('Test');
     rowEl.append(colEl3);
