@@ -26,8 +26,9 @@ for (let i = 0; i < 9; i++) {
     rowEl.append(colEl1);
 
     //Append Text Column to Row
-    let colEl2 = $('<div>');
-    colEl2.addClass('col-10, textarea');
+    let colEl2 = $('<input>');
+    colEl2.attr({type: 'text'});
+    colEl2.addClass('col-9 textarea');
     if(currTime>i+9){
         colEl2.addClass('past');
     }
@@ -43,6 +44,6 @@ for (let i = 0; i < 9; i++) {
     //Append Button Column to Row
     let colEl3 = $('<button>');
     colEl3.attr('class', 'col saveBtn');
-    colEl3.text('Test');
+    colEl3.text('\u{1F4BE}');
     rowEl.append(colEl3);
 }
