@@ -55,8 +55,6 @@ function createCalendar() {
 //~~~~ Fills Calendar using Local Storage data
 function updateCalendar() {
     for(let x of calendarEl.children()){
-        console.log(x.firstChild.textContent);
-
         if(localStorage.getItem(x.firstChild.textContent)){
             x.childNodes[1].value=localStorage.getItem(x.firstChild.textContent);
         }
