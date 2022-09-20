@@ -52,16 +52,26 @@ function createCalendar() {
     }
 }
 
-//~~~~ Saves user inputted event text ~~~~~~~~~
-function saveEvent(event){
-    console.log(event.target.previousElementSibling.value);
+//~~~~ Fills Calendar using Local Storage data
+function updateCalendar() {
+    for(let x of calendarEl.children()){
+        console.log(x.firstChild.textContent);
+
+        if(localStorage.getItem(x.firstChild.textContent)){
+            x.childNodes[1].value=localStorage.getItem(x.firstChild.textContent);
+        }
+    }
 }
 
 //~~~~ Functions that run on start-up ~~~~~~~~
 setCurrentDate();
 createCalendar();
+updateCalendar();
+
 
 //~~~~ Event Listeners ~~~~~~~~~~~~~~~~~~~~~~~
 calendarEl.on('click','.saveBtn', function(event){
-    saveEvent(event);
+    const eventTime = event.target.previousElementSibling.previousElementSibling.textContent;
+    const eventText = event.target.previousElementSibling.value;
+    localStorage.setItem(eventTime, eventText);
 })
