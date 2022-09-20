@@ -13,7 +13,9 @@ N/A
 Attached to this Github and [linked here](https://aesthetic-justice.github.io/Life-Planner/) are portals to the application displayed in the image below.
 ![alt text](./Develop/Base-Timed.jpg "example image")
 Contained within the center column of each row is a textbox. To use the application correctly, fill the appropriate textbox corresponding to the intended timeslot and then click the blue save button to its immediate right. Displayed below.
+
 ![alt text](./Develop/Base-SaveButton.jpg "save button")
+
 Once saved, the event will be restored on return to the application.
 Additionally, refreshing/loading the page will update the color of the timeslots to reflect the current time within common work-hours.
 
