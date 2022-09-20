@@ -27,7 +27,7 @@ for (let i = 0; i < 9; i++) {
 
     //Append Text Column to Row
     let colEl2 = $('<div>');
-    colEl2.addClass('col-10');
+    colEl2.addClass('col-10, textarea');
     if(currTime<i+9){
         colEl2.addClass('past');
     }
